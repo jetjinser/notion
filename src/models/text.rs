@@ -1,6 +1,4 @@
-use crate::models::properties::DateValue;
-use crate::models::users::User;
-use crate::{Database, Page};
+use crate::models::{properties::DateValue, users::User, Database, Page};
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug, Eq, PartialEq, Copy, Clone)]
