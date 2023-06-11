@@ -2,8 +2,8 @@ mod commands;
 
 use anyhow::{Context, Result};
 use clap::Parser;
-use notion::ids::DatabaseId;
-use notion::NotionApi;
+use notion_wasi::ids::DatabaseId;
+use notion_wasi::NotionApi;
 use serde::{Deserialize, Serialize};
 
 // From <https://docs.rs/clap/3.0.0-beta.2/clap/>

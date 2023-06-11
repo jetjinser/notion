@@ -1,12 +1,12 @@
 [package]
-name = "notion"
+name = "notion-wasi"
 version = "0.5.1"
-authors = ["Jake Swenson <jake@jakeswenson.com>"]
+authors = ["Jake Swenson <jake@jakeswenson.com>", "Jinser Kafka <cmdr.jv@gmail.com>"]
 edition = "2018"
-repository = "https://github.com/jakeswenson/notion"
+repository = "https://github.com/jetjinser/notion"
 readme = "README.md"
 
-description = "A Notion Api Client"
+description = "A Notion Api Client with wasi support"
 license = "MIT"
 
 [dependencies]

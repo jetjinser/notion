@@ -1,9 +1,9 @@
 use crate::TodoConfig;
 use anyhow::Result;
-use notion::ids::{AsIdentifier, DatabaseId};
-use notion::models::search::NotionSearch;
-use notion::models::Database;
-use notion::NotionApi;
+use notion_wasi::ids::{AsIdentifier, DatabaseId};
+use notion_wasi::models::search::NotionSearch;
+use notion_wasi::models::Database;
+use notion_wasi::NotionApi;
 use skim::{Skim, SkimItem, SkimItemReceiver, SkimItemSender, SkimOptions};
 use std::borrow::Cow;
 use std::ops::Deref;
