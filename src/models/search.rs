@@ -260,12 +260,24 @@ pub enum PropertyCondition {
 }
 
 #[derive(Serialize, Debug, Eq, PartialEq, Clone)]
+#[serde(rename_all = "snake_case")]
+pub enum TimestampCondition {
+    CreatedTime(DateCondition),
+    LastEditedTime(DateCondition),
+}
+
+#[derive(Serialize, Debug, Eq, PartialEq, Clone)]
 #[serde(untagged)]
 pub enum FilterCondition {
     Property {
         property: String,
         #[serde(flatten)]
         condition: PropertyCondition,
+    },
+    Timestamp {
+        timestamp: String,
+        #[serde(flatten)]
+        condition: TimestampCondition,
     },
     /// Returns pages when **all** of the filters inside the provided vector match.
     And { and: Vec<FilterCondition> },
